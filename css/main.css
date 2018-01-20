@@ -1,108 +1,198 @@
-html, body{
-    height: 100%;
-}
-.wrapper{
-    height: 100%;
-}
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-}
-.section{
-    width: 1100px;
-    min-height: 650px;
-}
-.header{
-    display: flex;
-    width: 100%;
-}
-.header__logo{
-    flex: 1 1 10%;
-    padding: 15px 0 0 75px;
-}
-.header__nav{
-    flex: 2 1 90%;
-}
-.greeting{
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-}
-.container-greeting{
-    background: url('../img/bg/video-bg.jpg') no-repeat;
-    background-size: cover;
-    height: 100%;
-}
-.nav-menu{
-    display: flex;
-    font-size: 13px;
-    font-family: 'ubuntu-medium', sans-serif;
-    padding: 25px 80px 0 0;
-}
-.nav-menu__list{
-    display: flex;
-    justify-content: flex-end;
-    color: #fff;
-    flex: 2 1 90%;
-    margin-right: 5px;
-}
-.nav-menu__link{
-    text-decoration: none;
-    color: #fff;
-    margin: 0 7px 0 7px;
-}
-.nav-menu__item{
-    margin-left: 20px;
-    text-transform: uppercase;
-}
-.nav-menu__item:first-child{
-    list-style: none;
-}
-.nav-menu__btn{
-    padding: 0 10px 0 10px;
-    height: 37px;
-    flex: 1 1 10%;
-    background: #e45028;
-    border-radius: 5px;
-    text-decoration: none;
-    text-transform: uppercase;
-    line-height: 36px;
-    text-align: center;
-    color: #fff;
-}
-.greeting-item{
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-.greeting-item__img-wrap{
-    padding-left: 40px;
-}
-.greeting-item__descr{
-    padding: 150px 0 0 70px;
-}
-.greeting-item__descr-text--top{
-    font-family: 'gagalin-regular', sans-serif;
-    font-size: 72px;
-    color: #f9b43b;
-}
-.greeting-item__descr-text--bottom{
-    font-family: 'lifehack-medium', sans-serif;
-    font-size: 65px;
-    color: #fff;
-}
-.greeting-arrow{
-    width: 100%;
-    text-align: center;
-    padding-bottom: 40px;
-    margin-top: auto;
-}
+@font-face {
+  font-family: 'lifehack-medium';
+  src: url("../fonts/lifehack/medium/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack/medium/lifehack_medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'gagalin-regular';
+  src: url("../fonts/gagalin/regular/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin/regular/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ubuntu-bold';
+  src: url("../fonts/ubuntu/bold/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu/bold/ubuntu-b-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ubuntu-light';
+  src: url("../fonts/ubuntu/light/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu/light/ubuntu-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ubuntu-medium';
+  src: url("../fonts/ubuntu/medium/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu/medium/ubuntu-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'ubuntu-regular';
+  src: url("../fonts/ubuntu/regular/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu/regular/ubuntu-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'ubuntu-light', sans-serif;
+  line-height: 1.42;
+  color: #2f3234;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
+html, body {
+  height: 100%; }
 
-.container-best{
-    background: url('../img/bg/best-bg.jpg') no-repeat;
-    background-size: cover;
-    height: 100%;
-}
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.wrapper {
+  height: 100%; }
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden; }
+
+.section {
+  width: 1100px;
+  min-height: 650px; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+
+.header__logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10%;
+          flex: 1 1 10%;
+  padding: 15px 0 0 75px; }
+
+.header__nav {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 90%;
+          flex: 2 1 90%; }
+
+.greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start; }
+
+.container-greeting {
+  background: url("../img/bg/video-bg.jpg") no-repeat;
+  background-size: cover;
+  height: 100%; }
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  font-family: 'ubuntu-medium', sans-serif;
+  padding: 25px 80px 0 0; }
+
+.nav-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #fff;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 90%;
+          flex: 2 1 90%;
+  margin-right: 5px; }
+
+.nav-menu__link {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 7px 0 7px; }
+
+.nav-menu__item {
+  margin-left: 20px;
+  text-transform: uppercase; }
+  .nav-menu__item:first-child {
+    list-style: none; }
+
+.nav-menu__btn {
+  padding: 0 10px 0 10px;
+  height: 37px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10%;
+          flex: 1 1 10%;
+  background: #e45028;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 36px;
+  text-align: center;
+  color: #fff; }
+
+.greeting-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px; }
+
+.greeting-item__img-wrap {
+  padding-left: 40px; }
+
+.greeting-item__descr {
+  padding: 150px 0 0 70px; }
+
+.greeting-item__descr-text--top {
+  font-family: 'gagalin-regular', sans-serif;
+  font-size: 72px;
+  color: #f9b43b; }
+
+.greeting-item__descr-text--bottom {
+  font-family: 'lifehack-medium', sans-serif;
+  font-size: 65px;
+  color: #fff; }
+
+.greeting-arrow {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 40px;
+  margin-top: auto; }
+
+.container-best {
+  background: url("../img/bg/best-bg.jpg") no-repeat;
+  background-size: cover;
+  height: 100%; }
+
+/*# sourceMappingURL=main.css.map */

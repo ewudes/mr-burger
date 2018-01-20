@@ -1,0 +1,85 @@
+.header{
+    display: flex;
+    width: 100%;
+}
+.header__logo{
+    flex: 1 1 10%;
+    padding: 15px 0 0 75px;
+}
+.header__nav{
+    flex: 2 1 90%;
+}
+.greeting{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+.container-greeting{
+    background: url('../img/bg/video-bg.jpg') no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.nav-menu{
+    display: flex;
+    font-size: 13px;
+    font-family: 'ubuntu-medium', sans-serif;
+    padding: 25px 80px 0 0;
+}
+.nav-menu__list{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    flex: 2 1 90%;
+    margin-right: 5px;
+}
+.nav-menu__link{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 7px 0 7px;
+}
+.nav-menu__item{
+    margin-left: 20px;
+    text-transform: uppercase;
+    &:first-child{
+        list-style: none;
+    }
+}
+.nav-menu__btn{
+    padding: 0 10px 0 10px;
+    height: 37px;
+    flex: 1 1 10%;
+    background: #e45028;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+}
+.greeting-item{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.greeting-item__img-wrap{
+    padding-left: 40px;
+}
+.greeting-item__descr{
+    padding: 150px 0 0 70px;
+}
+.greeting-item__descr-text--top{
+    font-family: 'gagalin-regular', sans-serif;
+    font-size: 72px;
+    color: #f9b43b;
+}
+.greeting-item__descr-text--bottom{
+    font-family: 'lifehack-medium', sans-serif;
+    font-size: 65px;
+    color: #fff;
+}
+.greeting-arrow{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-top: auto;
+}
