@@ -38,6 +38,8 @@
     margin: 0 7px 0 7px;
 }
 .nav-menu__item{
+    list-style: disc;
+    padding-top: 10px;
     margin-left: 20px;
     text-transform: uppercase;
     &:first-child{
