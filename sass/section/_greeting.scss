@@ -36,6 +36,9 @@
     text-decoration: none;
     color: #fff;
     margin: 0 7px 0 7px;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 .nav-menu__item{
     list-style: disc;
@@ -50,13 +53,17 @@
     padding: 0 10px 0 10px;
     height: 37px;
     flex: 1 1 10%;
-    background: #e45028;
+    background: $orange;
     border-radius: 5px;
     text-decoration: none;
     text-transform: uppercase;
-    line-height: 36px;
+    line-height: 38px;
     text-align: center;
     color: #fff;
+    &:hover{
+        background: darken($orange, 10%);
+    }
+
 }
 .greeting-item{
     display: flex;

@@ -138,6 +138,8 @@ ul {
   text-decoration: none;
   color: #fff;
   margin: 0 7px 0 7px; }
+  .nav-menu__link:hover {
+    text-decoration: underline; }
 
 .nav-menu__item {
   list-style: disc;
@@ -157,9 +159,11 @@ ul {
   border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
-  line-height: 36px;
+  line-height: 38px;
   text-align: center;
   color: #fff; }
+  .nav-menu__btn:hover {
+    background: #c13c18; }
 
 .greeting-item {
   display: -webkit-box;
@@ -248,5 +252,96 @@ ul {
 
 .best-description__img--natural {
   background: url("../img/decor/natural.png") center center no-repeat; }
+
+.container-reviews {
+  background: #3d3d3d;
+  background-size: cover;
+  height: 100%; }
+
+.reviews {
+  width: 100%;
+  background-color: #000; }
+
+.reviews__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.reviews__item {
+  width: 25%;
+  height: 50%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); }
+
+.reviews__item:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  -webkit-box-shadow: inset -200px -200px 0px 200px rgba(0, 0, 0, 0.49);
+  box-shadow: inset -200px -200px 0px 200px rgba(0, 0, 0, 0.49); }
+  .reviews__item:hover .reviews__hover {
+    left: 0; }
+
+.reviews__item--photo-1 {
+  background: url("../img/content/photo-1.png") center center no-repeat;
+  background-size: cover; }
+
+.reviews__item--photo-2 {
+  background: url("../img/content/photo-2.png") center center no-repeat;
+  background-size: cover; }
+
+.reviews__item--photo-3 {
+  background: url("../img/content/photo-3.png") center center no-repeat;
+  background-size: cover; }
+
+.reviews__item--photo-4 {
+  background: url("../img/content/photo-4.png") center center no-repeat;
+  background-size: cover; }
+
+.reviews__item--photo-5 {
+  background: url("../img/content/photo-5.png") center center no-repeat;
+  background-size: cover; }
+
+.reviews__item--photo-6 {
+  background: url("../img/content/photo-6.png") center center no-repeat;
+  background-size: cover; }
+
+.reviews__item--photo-7 {
+  background: url("../img/content/photo-7.png") center center no-repeat;
+  background-size: cover; }
+
+.reviews__item--photo-8 {
+  background: url("../img/content/photo-8.png") center center no-repeat;
+  background-size: cover; }
+
+.reviews__hover {
+  position: relative;
+  left: -999999px;
+  padding: 70px 20px 10px 20px;
+  color: #fff;
+  font-size: 14px; }
+
+.reviews__title {
+  font-family: 'gagalin', sans-serif;
+  margin-bottom: 20px; }
+
+.reviews__text {
+  line-height: 25px;
+  margin-bottom: 20px; }
+
+.reviews__btn {
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #2f3234;
+  color: #fff;
+  font-size: 13px;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */
