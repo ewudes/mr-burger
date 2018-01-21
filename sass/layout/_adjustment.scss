@@ -11,3 +11,30 @@
     width: 1100px;
     min-height: 650px;
 }
+
+.nav-section {
+    position: fixed;
+    top: 5.625rem;
+    right: 3rem; }
+    @media screen and (max-width: 768px) {
+      .section-switch {
+        display: none; } }
+  
+  .nav-section__item {
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+    margin-bottom: 0.3125rem;
+    border: 0.0625rem solid transparent;
+    border-radius: 50%;
+    cursor: pointer; }
+    .nav-section__item::after {
+      display: block;
+      margin: auto;
+      content: '';
+      width: 0.375rem;
+      height: 0.375rem;
+      border-radius: 50%;
+      background-color: #ffffff; }
+    .nav-section__item--active, .nav-section__item:hover {
+      border-color: #ffffff; }
