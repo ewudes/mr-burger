@@ -983,7 +983,7 @@ input[type="radio"]:checked + span:before {
   pointer-events: none; }
 
 .footer {
-  background: url("../../img/bg/footer-bg.jpg") center bottom no-repeat;
+  background: url("../img/bg/footer-bg.jpg") center bottom no-repeat;
   background-size: cover;
   position: absolute;
   bottom: 0;
