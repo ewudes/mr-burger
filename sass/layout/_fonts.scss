@@ -15,26 +15,26 @@
 }
 
 @font-face {
-    font-family: 'ubuntu-bold';
+    font-family: 'ubuntu';
     src: url('../fonts/ubuntu/bold/ubuntu-b-webfont.woff2') format('woff2'),
          url('../fonts/ubuntu/bold/ubuntu-b-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu-light';
+    font-family: 'ubuntu';
     src: url('../fonts/ubuntu/light/ubuntu-light-webfont.woff2') format('woff2'),
          url('../fonts/ubuntu/light/ubuntu-light-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu-medium';
+    font-family: 'ubuntu';
     src: url('../fonts/ubuntu/medium/ubuntu-medium-webfont.woff2') format('woff2'),
          url('../fonts/ubuntu/medium/ubuntu-medium-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -44,4 +44,28 @@
          url('../fonts/ubuntu/regular/ubuntu-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@mixin gagalin() {
+	font-family: 'gagalin-regular', Helvetica, sans-serif;
+}
+
+@mixin ubuntu($style: light) {
+	font-family: 'ubuntu', Helvetica, sans-serif;
+
+	@if $style == light {
+		font-weight: 300;
+	}
+
+	@if $style == medium {
+		font-weight: 500;
+	}
+
+	@if $style == bold {
+		font-weight: bold;
+	}
+}
+
+@mixin lifehack() {
+	font-family: 'lifehack-medium';
 }

@@ -1,64 +1,67 @@
-.container-reviews{
-    background: #3d3d3d;
-    background-size: cover;
-    height: 100%;
-}
-.reviews{
-    width: 100%;
-    background-color: #000;
-}
 .reviews__list{
-    display: flex;
+    width: 100%;
     height: 100%;
+    display: flex;
     flex-wrap: wrap;
 }
+
 .reviews__item{
     width: 25%;
     height: 50%;
     filter: grayscale(100%);
-}
-.reviews__item:hover{
-    filter: grayscale(0);
-    -webkit-box-shadow: inset -200px -200px 0px 200px rgba(0,0,0,0.49);
-    -moz-box-shadow: inset -200px -200px 0px 200px rgba(0,0,0,0.49);
-    box-shadow: inset -200px -200px 0px 200px rgba(0,0,0,0.49);
-    .reviews__hover{
-        left: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    &:hover{
+        .reviews__hover{
+            opacity: 1; 
+        }
     }
-}
-@each $photo in (photo-1, photo-2, photo-3, photo-4, photo-5, photo-6, photo-7, photo-8) {
-    .reviews__item--#{$photo} {
-        background: url('../img/content/#{$photo}.png')center center no-repeat;
-        background-size: cover;
+    @include tablets{
+        width: 50%;
+        height: 25%;
     }
 }
 
 .reviews__hover{
-    position: relative;
-    left: -999999px;
-    padding: 70px 20px 10px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .3s;
+    background: rgba(#141414, .7);
     color: #fff;
-    font-size: 14px;
+    font-size: rem(14px);
+    padding: rem(50px) rem(25px) 0;
+    @include tablets{
+        text-align: center;
+        padding: rem(20px) rem(25px) 0;
+    }
+    @include phones{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .reviews__title{
-    font-family: 'gagalin', sans-serif;
-    margin-bottom: 20px; 
+    @include gagalin();
+    @include phones{
+        margin-top: auto;
+    }
 }
+
 .reviews__text{
-    line-height: 25px;
-    margin-bottom: 20px;
-}
-.reviews__btn{
-    display: inline-block;
-    width: 110px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: $dark;
-    color: #fff;
-    font-size: 13px;
-    line-height: 36px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+    margin: rem(30px) 0 rem(20px);
+    line-height: rem(28px);
+    @include tablets{
+        margin: rem(5px) 0 rem(5px);
+        line-height: 20px;
+        font-size: 10px;
+    }
+    @include phones{
+        display: none;
+    }
 }

@@ -1,0 +1,65 @@
+.menu{
+    position: relative;
+    background: url('../img/bg/menu-bg.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+  
+.menu__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+  
+.menu__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+  
+.menu__item_active .menu__text {
+    max-width: rem(540px);
+    padding: rem(60px) rem(60px) rem(60px) rem(30px);
+}
+  
+.menu__item-title {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    width: rem(50px);
+    background: rgba(#000, .65);
+    font-size: rem(30px);
+    position: relative;
+    cursor: pointer;
+}
+  
+.menu__item-rotation {
+    padding-left: rem(40px);
+    @include gagalin();
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: rotateZ(-90deg) translateY(-50%);
+        -ms-transform: rotate(-90deg) translateY(-50%);
+            transform: rotateZ(-90deg) translateY(-50%);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    white-space: nowrap;
+}
+  
+.menu__text {
+    max-width: 0;
+    overflow: hidden;
+    background: rgba(47, 50, 52, .93);
+    color: #fff;
+    font-size: .875rem;
+    padding: 0;
+    transition: all 1s;
+}

@@ -1,52 +1,66 @@
-.container-best{
-    background: url('../img/bg/best-bg.jpg')no-repeat;
-    background-size: cover;
-    height: 100%;
-}
-
 .best{
+    background: url('../img/bg/best-bg.jpg') center center no-repeat;
+    background-size: cover;
+}
+  
+.best__list{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.best-description__list{
-    display: flex;
-    text-align: center;
-}
-
-.title-wrap{
-    margin-top: 30px;
-}
-
-.title{
-    font-family: 'gagalin', sans-serif;
-    font-size: 72px;
-}
-
-.best-description__item{
-    width: 300px;
-}
-
-.best-description__img{
-   width: 100px;
-   height: 100px;
-   margin: auto;
-}
-
-.best-description__title{
-    font-family: 'lifehack', sans-serif;
-    font-size: 24px;
-    margin: 30px 0 15px 0;
-}
-.best-description__text{
-    font-size: 14px;
-    color: #2f3234;
-    opacity: .8;
-}
-
-@each $descr in (meat, hand, natural) {
-    .best-description__img--#{$descr} {
-        background: url('../img/decor/#{$descr}.png')center center no-repeat;
+    justify-content: space-between;
+    @include phones{
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
     }
+}
+  
+.best__item{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    @include phones{
+        flex-direction: row;
+        width: 100%;
+        margin: 15px 0;
+    }
+}
+
+.best__icon{
+    display: flex;
+    justify-content: center;
+    @include phones{
+        margin-right: 15px;
+    }
+}
+
+.best__info{
+    text-align: center;
+    @include phones{
+        text-align: left;
+    }
+}
+
+.best__icon-pic{
+    width: rem(100px);
+    height: rem(90px);
+    &_meat{
+        fill: $red;
+    }
+    &_hand{
+        fill: $yellow;
+    }
+    &_natural{
+        fill: $green;
+    }
+}
+
+.best__title{
+    @include lifehack;
+    font-size: rem(24px);
+    margin-bottom: rem(20px);
+}
+
+.best__text{
+    @include ubuntu($style: light);
+    font-size: rem(14px);
+    opacity: .8;
 }

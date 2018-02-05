@@ -1,37 +1,83 @@
 .wrapper{
-    height: 100%;
-}
-.container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    position: relative;
+    width: 100%;  
+    // min-width: rem(940px) + rem(20px);
+    min-height: 100%;
     overflow: hidden;
 }
+
+.container{
+    width: 95%;
+    max-width: rem(940px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    &_align{
+        &_row{
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-top: rem(80px);
+        }
+    }
+}
 .section{
-    width: 1100px;
-    min-height: 650px;
+    height: 100vh;
+    min-height: rem(650px);
+}
+
+.section-title{
+    font-size: rem(72px);
+    color: $yellow;
+    margin-bottom: rem(50px);
+    @include gagalin();
+    &_color{
+        &_black{
+            color: $dark;    
+        }
+        &_white{
+            color: #fff;
+        }
+    }
+    &_align{
+        &_center{
+            text-align: center;
+            @include tablets{
+                margin-top: 20px;
+                margin-bottom: 30px;
+                font-size: 65px;
+            }
+        }
+        &_bottom{
+            margin-bottom: 0;
+        }
+    }
+    @include phones{
+        font-size: rem(63px);
+    }
 }
 
 .nav-section {
     position: fixed;
-    top: 110px;
-    right: 60px; 
+    top: rem(110px);
+    right: rem(60px); 
 }
   
 .nav-section__item {
     display: flex;
-    width: 15px;
-    height: 15px;
-    margin-bottom: 5px;
-    border: 1px solid transparent;
+    width: rem(15px);
+    height: rem(15px);
+    margin-bottom: rem(5px);
+    border: rem(1px) solid transparent;
     border-radius: 50%;
     cursor: pointer; 
     &:after {
       display: block;
       margin: auto;
       content: '';
-      width: 7px;
-      height: 7px;
+      width: rem(7px);
+      height: rem(7px);
       border-radius: 50%;
       background-color: #fff; 
     }
@@ -39,4 +85,26 @@
 
 
 .nav-section__item--active, .nav-section__item:hover {
-      border-color: #fff; }
+      border-color: #fff; 
+}
+
+
+.btn{
+    padding: rem(8px) rem(20px);
+    background: $red;
+    text-transform: uppercase;
+    font-size: rem(13px); 
+    display: inline-block;
+    color: #fff;
+    border-radius: rem(5px);
+    text-decoration: none;
+    &:hover{
+        background: darken($red, 7%)
+    }
+    &_color{
+        &_dark{
+            background: $dark;
+            margin-bottom: auto;
+        }
+    }
+  }
