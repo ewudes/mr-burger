@@ -5,7 +5,7 @@ function initMap() {
         center: uluru
     });
 
-    var image = '../img/icons/map-marker.svg';
+    var image = 'img/icons/map-marker.svg';
 
     // var marker = new google.maps.Marker({
     //     position: uluru,
