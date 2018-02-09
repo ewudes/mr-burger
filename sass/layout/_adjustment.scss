@@ -19,7 +19,11 @@
             flex-direction: row;
             justify-content: flex-start;
             padding-top: rem(80px);
+            margin-right: 0;
         }
+    }
+    &_slider{
+        flex-direction: row;
     }
 }
 .section{
@@ -38,6 +42,10 @@
         }
         &_white{
             color: #fff;
+            line-height: 70px;
+        }
+        &_red{
+            color: $red;
         }
     }
     &_align{
@@ -52,6 +60,10 @@
         &_bottom{
             margin-bottom: 0;
         }
+    }
+    &_currency{
+        font-size: 30px;
+        margin-right: 30px;
     }
     @include phones{
         font-size: rem(63px);

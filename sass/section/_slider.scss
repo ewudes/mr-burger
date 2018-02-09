@@ -1,5 +1,145 @@
 .slider{
     position: relative;
-    background: url('../img/bg/slider-bg.jpg') center center no-repeat;
+    background: repeating-linear-gradient(180deg, #f9b43b, #eb8c38 50%, #eb8c38, #f9b43b);
     background-size: cover;
+}
+
+.page-control{
+    display: flex;
+    cursor: pointer;
+}
+
+.slider-wrap{
+    display: flex;
+    margin: auto;
+    @include tablets{
+        flex-direction: column;
+    }
+}
+
+.slider-left, .slider-right{
+    width: 50%;
+    display: flex;
+    @include tablets{
+        margin: auto;
+        width: 80%;
+    }
+    @include phones{
+        width: 100%;
+    }
+}
+
+.slider-left{
+    position: relative;
+    @include phones{
+        height: 250px;
+    }
+}
+
+.slider-right{
+    flex-direction: column;
+    padding: 0 2%;
+    @include tablets{
+        text-align: center;
+    }
+}
+
+.slider-left_img, .slider-right_img{
+    width: 20px;
+    fill: #fff;
+    margin: auto;
+}
+
+.slider-left_img{
+    transform: rotate(90deg);
+}
+
+.slider-right_img{
+    transform: rotate(-90deg);
+}
+
+.slider-img{
+    width: 100%;
+    margin: auto;
+    @include tablets{
+        width: 70%;
+        margin-bottom: 0;
+    }
+}
+
+.slider-right__descr{
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 25px;
+    @include tablets{
+        margin-bottom: 0;    }
+}
+
+.composition-wrap{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    background: #f08c33;
+    border-radius: 6px;
+    cursor: pointer;
+    @include tablets{
+        top: 10%;
+    }
+}
+
+.composition{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.composition-img{
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+}
+
+.composition-text{
+    @include gagalin();
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.calories-wrap{
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    bottom: 0;
+    color: #fff;
+    opacity: .5;
+    @include tablets{
+        top: 10%;
+        right: 0;
+    }
+}
+
+.calories-img{
+    height: 60px;
+    width: 60px;
+    fill: #fff;
+}
+
+.calories{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.kkal{
+    @include gagalin();
+    font-size: 20px;
+}
+
+.calories-text{
+    @include gagalin();
+    text-align: center;
 }
