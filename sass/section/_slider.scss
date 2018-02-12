@@ -12,6 +12,18 @@
 .slider-wrap{
     display: flex;
     margin: auto;
+    overflow: hidden;
+    
+
+}
+
+.slider-list{
+    display: flex;
+    transition: all .5s;
+}
+
+.slider-item{
+    display: flex;
     @include tablets{
         flex-direction: column;
     }

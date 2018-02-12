@@ -31,10 +31,18 @@
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
     width: rem(50px);
-    background: rgba(#000, .65);
     font-size: rem(30px);
     position: relative;
     cursor: pointer;
+    &_meat{
+        background: url('../../img/decor/m_meat.jpg');
+    }
+    &_vegan{
+        background: url('../../img/decor/m_vegan.jpg');
+    }
+    &_diet{
+        background: url('../../img/decor/m_diet.jpg');
+    }
 }
   
 .menu__item-rotation {
