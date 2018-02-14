@@ -110,6 +110,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center; }
   .container_align_row {
+    max-width: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -639,11 +640,15 @@ p {
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg); }
+  .slider-left_img:hover {
+    fill: #263238; }
 
 .slider-right_img {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg); }
+  .slider-right_img:hover {
+    fill: #263238; }
 
 .slider-img {
   width: 100%;
@@ -886,6 +891,11 @@ p {
   -webkit-transition: height 0.3s ease;
   -o-transition: height 0.3s ease;
   transition: height 0.3s ease; }
+  @media screen and (max-width: 768px) {
+    .team-list__content {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .team-list__descr-title {
   font-family: 'ubuntu', Helvetica, sans-serif;
@@ -893,7 +903,6 @@ p {
   margin-bottom: 0.9375rem; }
   @media screen and (max-width: 768px) {
     .team-list__descr-title {
-      margin-top: 100px;
       margin-bottom: 10px; } }
 
 .team-list__descr {
@@ -907,7 +916,9 @@ p {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  width: 8.25rem;
+  height: 8.25rem; }
 
 .team-list__img {
   position: relative;
@@ -950,6 +961,7 @@ p {
   padding: 3.75rem 3.75rem 3.75rem 1.875rem; }
 
 .menu__item-title {
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -958,11 +970,11 @@ p {
   position: relative;
   cursor: pointer; }
   .menu__item-title_meat {
-    background: url("../../img/decor/m_meat.jpg"); }
+    background: url("../img/decor/m_meat.jpg"); }
   .menu__item-title_vegan {
-    background: url("../../img/decor/m_vegan.jpg"); }
+    background: url("../img/decor/m_vegan.jpg"); }
   .menu__item-title_diet {
-    background: url("../../img/decor/m_diet.jpg"); }
+    background: url("../img/decor/m_diet.jpg"); }
 
 .menu__item-rotation {
   padding-left: 2.5rem;

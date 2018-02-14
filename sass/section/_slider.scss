@@ -64,10 +64,16 @@
 
 .slider-left_img{
     transform: rotate(90deg);
+    &:hover{
+        fill: #263238
+    }
 }
 
 .slider-right_img{
     transform: rotate(-90deg);
+    &:hover{
+        fill: #263238
+    }
 }
 
 .slider-img{

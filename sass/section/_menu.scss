@@ -27,6 +27,7 @@
 }
   
 .menu__item-title {
+    background: rgba(#000, .6);
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
         flex: 0 0 auto;
@@ -35,14 +36,15 @@
     position: relative;
     cursor: pointer;
     &_meat{
-        background: url('../../img/decor/m_meat.jpg');
+        background: url('../img/decor/m_meat.jpg');
     }
     &_vegan{
-        background: url('../../img/decor/m_vegan.jpg');
+        background: url('../img/decor/m_vegan.jpg');
     }
     &_diet{
-        background: url('../../img/decor/m_diet.jpg');
+        background: url('../img/decor/m_diet.jpg');
     }
+
 }
   
 .menu__item-rotation {

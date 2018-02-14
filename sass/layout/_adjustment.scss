@@ -16,6 +16,7 @@
     justify-content: center;
     &_align{
         &_row{
+            max-width: 100%;
             flex-direction: row;
             justify-content: flex-start;
             padding-top: rem(80px);
