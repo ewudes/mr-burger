@@ -69,3 +69,10 @@ document.addEventListener('DOMContentLoaded', function () {//загрузилс�
     }, false)
   
   }, false);
+
+  $(function() {
+    $('.composition-wrap').click(function() {
+      $('.composition-descr').add(
+        ).toggleClass('composition-descr_active')
+    });
+  });

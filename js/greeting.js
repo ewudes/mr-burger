@@ -26,7 +26,6 @@ function openOverlay(content) {
   return overlayElement;
 }
 
-
 openButton.addEventListener("click", function(event) {
   event.preventDefault(); //nav--large-width
   var mainMenu = document.getElementsByClassName('nav')[0].cloneNode(true);
@@ -35,3 +34,4 @@ openButton.addEventListener("click", function(event) {
   const overlay = openOverlay(mainMenu.outerHTML);
   document.body.appendChild(overlay);
 });
+
