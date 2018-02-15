@@ -121,6 +121,9 @@
     fill: #fff;
     width: rem(29px);
     height: rem(14px);
+    &:hover{
+        fill: darken(#fff, 30%)
+    }
 }
 
 .hamburger-menu {

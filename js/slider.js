@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {//загрузилс�
     const right = document.querySelector(".page-control_next");// кнопка вправо
     const itemsWrapper = document.getElementById("items");// лента слайдов
     const items = document.querySelectorAll(".slider-item");// сами слайды
+    var composition = document.getElementsByClassName(".composition-descr");
   
     let mainWidth = getComputedStyle(wrapper).width; //ширина слайда и смещение ленты
     let currentIndex = 0; //индекс слайда
@@ -18,10 +19,11 @@ document.addEventListener('DOMContentLoaded', function () {//загрузилс�
       scrollSlide(-1);
     });
   
+
   
     function scrollSlide(vector) {
       currentIndex += vector; //обновляем индекс
-  
+      
       //делаем проверки
       //1) не больше числа слайдов
       currentIndex = currentIndex <= (items.length-1) ? currentIndex : items.length-1;
@@ -30,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function () {//загрузилс�
   
       //изменяем смещение ленты
       itemsWrapper.style.marginLeft = -currentIndex * parseInt(mainWidth) + "px";
+
+      $('.composition-descr').removeClass('composition-descr_active')
+      $('.composition-wrap').removeClass('composition-wrap_active')
+   
+
+
     }
   
     function resizer() {
@@ -72,7 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {//загрузилс�
 
   $(function() {
     $('.composition-wrap').click(function() {
-      $('.composition-descr').add(
-        ).toggleClass('composition-descr_active')
+      $('.composition-descr').toggleClass('composition-descr_active')
+      $('.composition-wrap').toggleClass('composition-wrap_active')
     });
   });
+
+  

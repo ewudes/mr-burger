@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
 </head>
 <body>
     <div class="wrapper">
@@ -23,22 +24,22 @@
                             <nav class="nav nav--large-width">
                                 <ul class="nav__list">
                                     <li class="nav__item">
-                                      <a href="#" class="nav__link">о нас</a>  
+                                      <a href="#best" class="nav__link">о нас</a>  
                                     </li>
                                     <li class="nav__item">
-                                      <a href="#" class="nav__link">бургеры</a>  
+                                      <a href="#slider" class="nav__link">бургеры</a>  
                                     </li>
                                     <li class="nav__item">
-                                      <a href="#" class="nav__link">команда</a>  
+                                      <a href="#team" class="nav__link">команда</a>  
                                     </li>
                                     <li class="nav__item">
-                                      <a href="#" class="nav__link">меню</a>  
+                                      <a href="#menu" class="nav__link">меню</a>  
                                     </li>
                                     <li class="nav__item">
-                                      <a href="#" class="nav__link">отзывы</a>  
+                                      <a href="#reviews" class="nav__link">отзывы</a>  
                                     </li>
                                     <li class="nav__item">
-                                      <a href="#" class="nav__link">контакты</a>  
+                                      <a href="#contacts" class="nav__link">контакты</a>  
                                     </li>
                                 </ul>
                             </nav>
@@ -283,6 +284,52 @@
                                             <span class="composition-text">состав</span>
                                         </div>
                                     </div>
+                                    <div class="composition-descr">
+                                        <ul class="composition__list">
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #e25028">
+                                                    <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Говядина</div>
+                                                <div class="composition__item-gr">300г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #f8b43a">
+                                                    <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Булочки</div>
+                                                <div class="composition__item-gr">100г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #8ac03e">
+                                                    <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Зелень</div>
+                                                <div class="composition__item-gr">70г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #e25028">
+                                                    <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Соус</div>
+                                                <div class="composition__item-gr">150г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #8ac03e">
+                                                    <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Овощи</div>
+                                                <div class="composition__item-gr">200г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #f8b43a">
+                                                    <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Сыр</div>
+                                                <div class="composition__item-gr">80г.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <img src="img/content/burger_sandwich.png" alt="" class="slider-img">
                                     <div class="calories-wrap">
                                         <div class="calories">
@@ -312,6 +359,52 @@
                                             </svg>
                                             <span class="composition-text">состав</span>
                                         </div>
+                                    </div>
+                                    <div class="composition-descr">
+                                        <ul class="composition__list">
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #e25028">
+                                                    <use xlink:href="./img/sprite/sprite.svg#beef"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Говядина</div>
+                                                <div class="composition__item-gr">300г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #f8b43a">
+                                                    <use xlink:href="./img/sprite/sprite.svg#buns"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Булочки</div>
+                                                <div class="composition__item-gr">100г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #8ac03e">
+                                                    <use xlink:href="./img/sprite/sprite.svg#salad"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Зелень</div>
+                                                <div class="composition__item-gr">70г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #e25028">
+                                                    <use xlink:href="./img/sprite/sprite.svg#sauce"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Соус</div>
+                                                <div class="composition__item-gr">150г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #8ac03e">
+                                                    <use xlink:href="./img/sprite/sprite.svg#cucumber"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Овощи</div>
+                                                <div class="composition__item-gr">200г.</div>
+                                            </li>
+                                            <li class="composition__item">
+                                                <svg class="composition__item-img" style="fill: #f8b43a">
+                                                    <use xlink:href="./img/sprite/sprite.svg#cheese"></use>
+                                                </svg>
+                                                <div class="composition__item-name">Сыр</div>
+                                                <div class="composition__item-gr">80г.</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <img src="img/content/diner_bacon_cheeseburger.png" alt="" class="slider-img">
                                     <div class="calories-wrap">
@@ -642,19 +735,36 @@
 
         </div>
 
-        <ul class="nav-section">
-            <li class="nav-section__item nav-section__item--active"></li>
-            <li class="nav-section__item"></li>
-            <li class="nav-section__item"></li>
-            <li class="nav-section__item"></li>
-            <li class="nav-section__item"></li>
-            <li class="nav-section__item"></li>
-            <li class="nav-section__item"></li>
-            <li class="nav-section__item"></li>
+        <ul class="nav-section" id="myMenu">
+            <li data-menuanchor="greeting" class="nav-section__item nav-section__item--active">
+                <a href="#greeting" class></a>
+            </li>
+            <li data-menuanchor="best" class="nav-section__item">
+                <a href="#best" class></a>
+            </li>
+            <li data-menuanchor="slider" class="nav-section__item">
+                <a href="#slider" class></a>
+            </li>
+            <li data-menuanchor="team" class="nav-section__item">
+                <a href="#team" class></a>
+            </li>
+            <li class="nav-section__item">
+                <a href="#menu" class></a>
+            </li>
+            <li class="nav-section__item">
+                <a href="#reviews" class></a>
+            </li>
+            <li class="nav-section__item">
+                <a href="#order" class></a>
+            </li>
+            <li class="nav-section__item">
+                <a href="#contacts" class></a>
+            </li>
         </ul> 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
     <script src="js/greeting.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/team.js"></script>

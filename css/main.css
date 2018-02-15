@@ -337,6 +337,8 @@ p {
   fill: #fff;
   width: 1.8125rem;
   height: 0.875rem; }
+  .go-down-img:hover {
+    fill: #b3b3b3; }
 
 .hamburger-menu {
   position: fixed;
@@ -698,6 +700,8 @@ p {
   background: #f08c33;
   border-radius: 6px;
   cursor: pointer; }
+  .composition-wrap_active {
+    background: #e35028; }
   .composition-wrap:hover {
     background: #e35028; }
   @media screen and (max-width: 768px) {

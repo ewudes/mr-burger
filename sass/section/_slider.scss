@@ -124,6 +124,9 @@
     background: #f08c33;
     border-radius: 6px;
     cursor: pointer;
+    &_active{
+        background: $red;
+    }
     &:hover{
          background: $red;
     }
