@@ -34,4 +34,3 @@ openButton.addEventListener("click", function(event) {
   const overlay = openOverlay(mainMenu.outerHTML);
   document.body.appendChild(overlay);
 });
-
