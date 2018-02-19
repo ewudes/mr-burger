@@ -1134,7 +1134,7 @@ p {
     .reviews__text {
       display: none; } }
 
-.overlay {
+.overrlay {
   position: fixed;
   top: 0;
   left: 0;

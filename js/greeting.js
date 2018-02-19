@@ -1,4 +1,5 @@
 const openButton = document.querySelector(".hamburger-menu-link");
+const closeButton = document.querySelector(".nav__link");
 
 function openOverlay(content) {
   const overlayElement = document.createElement("div");
