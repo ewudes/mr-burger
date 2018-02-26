@@ -65,6 +65,13 @@
     height: rem(110px);
 }
 
+input[name="dont-disturb"]{
+    display: none;
+}
+input[name="pay-option"]{
+    display: none;
+}
+
 input[type="checkbox"]+span,input[type="radio"]+span{
     -webkit-appearance: none;
     width: rem(14px);

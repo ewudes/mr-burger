@@ -1,5 +1,4 @@
 const openButton = document.querySelector(".hamburger-menu-link");
-const closeButton = document.querySelector(".nav__link");
 
 function openOverlay(content) {
   const overlayElement = document.createElement("div");
@@ -11,14 +10,22 @@ function openOverlay(content) {
   const contentElement = document.createElement("div");
   contentElement.classList.add("content");
   contentElement.innerHTML = content;
+  
+  const closeMenu = function() {
+    document.body.removeChild(overlayElement);
+  };
 
   const closeElement = document.createElement("a");
   closeElement.classList.add("close");
   closeElement.textContent = "x";
   closeElement.href = "#";
-  closeElement.addEventListener("click", function() {
-    document.body.removeChild(overlayElement);
-  });
+  closeElement.addEventListener("click", closeMenu);
+  
+  const menuItems = contentElement.querySelectorAll('li');
+  
+  for(let item of menuItems) {
+    item.addEventListener("click", closeMenu);
+  }
 
   overlayElement.appendChild(containerElement);
   containerElement.appendChild(closeElement);
@@ -35,3 +42,4 @@ openButton.addEventListener("click", function(event) {
   const overlay = openOverlay(mainMenu.outerHTML);
   document.body.appendChild(overlay);
 });
+

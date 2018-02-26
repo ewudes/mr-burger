@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {//загрузилс�
       currentIndex = currentIndex <= (items.length-1) ? currentIndex : items.length-1;
       //2) не меньше нуля
       currentIndex = currentIndex >= 0 ? currentIndex : 0;
+
+      
   
       //изменяем смещение ленты
       itemsWrapper.style.marginLeft = -currentIndex * parseInt(mainWidth) + "px";
@@ -36,8 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {//загрузилс�
       $('.composition-descr').removeClass('composition-descr_active')
       $('.composition-wrap').removeClass('composition-wrap_active')
    
-
-
     }
   
     function resizer() {
@@ -85,4 +85,4 @@ document.addEventListener('DOMContentLoaded', function () {//загрузилс�
     });
   });
 
-  
+

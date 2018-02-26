@@ -43,7 +43,7 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <a href="#" class="btn">заказать</a>
+                            <a href="#order" class="btn">заказать</a>
                             <a class="hamburger-menu-link" href="">
                                 <div class="hamburger-menu-link__bars"></div>
                             </a>
@@ -115,7 +115,7 @@
 
             <section class="section slider">
                 <div class="container container_slider">
-                    <div class="page-control page-control_prev">
+                    <div class="page-control page-control_prev" id="left">
                         <svg class="slider-left_img">
                             <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
                         </svg>
@@ -428,7 +428,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page-control page-control_next">
+                    <div class="page-control page-control_next" id="right">
                         <svg class="slider-right_img">
                             <use xlink:href="./img/sprite/sprite.svg#arrow-scroll"></use>
                         </svg>
@@ -624,40 +624,40 @@
             <section class="section order">
                 <div class="container">
                     <h2 class="section-title section-title_align_center">закажите доставку</h2>
-                    <form action="#" class="form__elem">
+                    <form action="server.php" method="post" id="order-form" class="form__elem">
                         <div class="form__content">
                             <div class="form__row">
                                 <label class="form__block">
                                     <span class="form__block-title">Имя</span>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="user-name" required>
                                 </label>
                                 <label class="form__block">
                                     <span class="form__block-title">Телефон</span>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="user-phone" required>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <span class="form__block-title">Улица</span>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="user-street" required>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <span class="form__block-title">Дом</span>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="user-house" required>
                                 </label>
                                 <label class="form__block">
                                     <span class="form__block-title">Корпус</span>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="user-case" required>
                                 </label>
                                 <label class="form__block">
                                     <span class="form__block-title">Квартира</span>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="user-apartment" required>
                                 </label>
                                 <label class="form__block">
                                     <span class="form__block-title">Этаж</span>
-                                    <input type="text" class="form__input">
+                                    <input type="text" class="form__input" name="user-floor" required>
                                 </label>
                             </div>
                         </div>
@@ -665,29 +665,30 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <span class="form__block-title">Комментарий</span>
-                                    <textarea class="form__input form__text"></textarea>
+                                    <textarea class="form__input form__text" name="message"></textarea>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
-                                    <input type="radio" name="cash" hidden>
+                                    <input type="radio" id="pay-cash" name="pay-option" value="потребуется сдача">
                                     <span></span>
                                     <span class="form__block-title">Потребуется сдача</span>
                                 </label>
                                 <label class="form__block">
-                                    <input type="radio" name="cash" hidden>
+                                    <input type="radio" id="pay-card" name="pay-option" value="оплата по карте">
                                     <span></span>
                                     <span class="form__block-title">Оплата по карте</span>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
-                                    <input type="checkbox" hidden>
+                                    <input type="checkbox" name="dont-disturb" value="1">
                                     <span></span>
                                     <span class="form__block-title">Не перезванивать</span>
                                 </label>
                             </div>
-                            <a href="" class="btn">заказать</a>
+                            <button type="submit" class="btn">Заказать</button>
+                            
                         </div>
                     </form>
                 </div>
@@ -773,7 +774,6 @@
             </li>
         </ul> 
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/jquery.fullPage.js"></script>
     <script src="js/greeting.js"></script>
@@ -781,6 +781,7 @@
     <script src="js/team.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/reviews.js"></script>
+    <script src="js/form.js"></script>
     <script src="js/contacts.js"></script>
 
 </body>
