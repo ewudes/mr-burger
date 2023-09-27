@@ -1,7 +1,7 @@
-import replace from 'gulp-replace'; // Поиск и замена
-import browserSync from 'browser-sync'; // Локальный сервер
-import newer from 'gulp-newer'; // Проверка обновления
-import ifPlugin from 'gulp-if'; // Условное ветление
+import replace from 'gulp-replace';
+import browserSync from 'browser-sync';
+import newer from 'gulp-newer';
+import ifPlugin from 'gulp-if';
 
 const concatPathAndFileName = (path, files) => {
   return files.map((file) => `${path}/${file}`);
