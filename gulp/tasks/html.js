@@ -19,9 +19,6 @@ const html = (isBuild) => {
         useShortDoctype: true,
         sortClassName: true,
         removeComments: isBuild,
-
-        /** Раскомментировать если требуется минификация html */
-        //collapseWhitespace: isBuild,
       })
     )
     .pipe(

@@ -12,8 +12,6 @@ const createSvgSprite = () => {
         mode: {
           symbol: {
             sprite: '../sprite.svg',
-
-            /** Создавать страницу с перечнем иконок */
             example: true,
           },
         },

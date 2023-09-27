@@ -27,15 +27,10 @@ const scss = (isBuild) => {
 		.pipe(sass({outputStyle: 'expanded'}))
 		.pipe(plugins.replace(/@img\//g, '../images/'))
 
-		/** Группировка медиа-запросов только для production */
 		.pipe(plugins.if(isBuild, groupMediaQueries()))
 
 		.pipe(plugins.if(isBuild, webpCss(webpConfig)))
 		.pipe(plugins.if(isBuild, postcss([autoprefixer(), postcssPresetEnv()])))
-
-		/** Раскомментировать если нужен не сжатый дубль файла стилей */
-		// .pipe(gulp.dest(filePaths.build.css))
-
 		.pipe(plugins.if(isBuild, cleanCss()))
 		.pipe(rename({extname: '.min.css'}))
 		.pipe(gulp.dest(filePaths.build.css))
