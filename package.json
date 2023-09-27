@@ -4,7 +4,7 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-    "dev": "gulp",
+    "start": "gulp",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deployFTP": "gulp deployFTP --build",
@@ -21,6 +21,10 @@
     "url": "https://github.com/ewudes/burgers-landing/issues"
   },
   "homepage": "https://github.com/ewudes/burgers-landing#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "swiper": "^8.4.5"
+  },
   "devDependencies": {
     "@babel/core": "^7.22.10",
     "@babel/preset-env": "^7.19.1",
@@ -62,9 +66,5 @@
     "webp-converter": "*2.2.3",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
-  },
-  "dependencies": {
-    "aos": "^2.3.4",
-    "swiper": "^8.4.5"
   }
 }
