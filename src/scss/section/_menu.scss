@@ -1,10 +1,10 @@
 .menu{
     position: relative;
-    background: url('../img/bg/menu-bg.jpg') center center no-repeat;
+    background: url('../images/bg/menu-bg.jpg') center center no-repeat;
     background-size: cover;
 }
 
-  
+
 .menu__list {
     position: absolute;
     top: 0;
@@ -14,18 +14,18 @@
     display: -ms-flexbox;
     display: flex;
 }
-  
+
 .menu__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
-  
+
 .menu__item_active .menu__text {
     max-width: rem(540px);
     padding: rem(60px) rem(60px) rem(60px) rem(30px);
 }
-  
+
 .menu__item-title {
     background: rgba(#000, .6);
     -webkit-box-flex: 0;
@@ -36,17 +36,17 @@
     position: relative;
     cursor: pointer;
     &_meat{
-        background: url('../img/decor/m_meat.jpg');
+        background: url('../images/decor/m_meat.jpg');
     }
     &_vegan{
-        background: url('../img/decor/m_vegan.jpg');
+        background: url('../images/decor/m_vegan.jpg');
     }
     &_diet{
-        background: url('../img/decor/m_diet.jpg');
+        background: url('../images/decor/m_diet.jpg');
     }
 
 }
-  
+
 .menu__item-rotation {
     padding-left: rem(40px);
     @include gagalin();
@@ -63,7 +63,7 @@
             transform-origin: 0 0;
     white-space: nowrap;
 }
-  
+
 .menu__text {
     max-width: 0;
     overflow: hidden;

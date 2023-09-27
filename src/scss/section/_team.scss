@@ -1,5 +1,5 @@
 .team{
-  background: url('../img/bg/team-bg.jpg') no-repeat;
+  background: url('../images/bg/team-bg.jpg') no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -49,7 +49,7 @@
   flex-direction: column;
   flex: 1;
   padding: 0;
-  margin: 0; 
+  margin: 0;
   @include tablets{
     max-width: 65%;
   }
@@ -65,7 +65,7 @@
 }
 
 .team-list__item--active .team-list__title {
-  color: #f9b43b; 
+  color: #f9b43b;
 }
 
 .team-list__item--active .team-list__title::before {
@@ -73,7 +73,7 @@
 }
 
 .team-list__item--active .team-list__content {
-  margin-bottom: 0.3125rem; 
+  margin-bottom: 0.3125rem;
   height: rem(110px);
   @include tablets{
     flex-direction: column;
@@ -89,7 +89,7 @@
   @include gagalin();
   color: #ffffff;
   text-transform: uppercase;
-  cursor: pointer; 
+  cursor: pointer;
   &::before {
       content: '';
       width: 0;
