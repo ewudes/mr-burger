@@ -1,131 +1,68 @@
-"use strict";
+import gulp from 'gulp';
+import { filePaths } from './gulp/config/paths.js';
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var uglify = require("gulp-uglify");
-var rename = require("gulp-rename");
-var csso = require("gulp-csso");
-var posthtml = require("gulp-posthtml");
-var htmlmin = require("gulp-htmlmin");
-var imagemin = require("gulp-imagemin");
-var del = require("del");
-var include = require("posthtml-include");
-var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore");
-var server = require("browser-sync").create();
+/**
+ * Импорт задач
+ */
+import { copy } from './gulp/tasks/copy.js';
+import { copyRootFiles } from './gulp/tasks/copyRootFiles.js';
+import { reset } from './gulp/tasks/reset.js';
+import { html } from './gulp/tasks/html.js';
+import { server } from './gulp/tasks/server.js';
+import { scss } from './gulp/tasks/scss.js';
+import { javaScript } from './gulp/tasks/javaScript.js';
+import { images } from './gulp/tasks/images.js';
+import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js';
+import { createSvgSprite } from './gulp/tasks/createSvgSprite.js';
+import { zip } from './gulp/tasks/zip.js';
+import { ftpDeploy } from './gulp/tasks/ftpDeploy.js';
 
-gulp.task("clean", function () {
-  return del("dist/**");
-});
+const isBuild = process.argv.includes('--build');
+const handleHTML = html.bind(null, isBuild);
+const handleSCSS = scss.bind(null, isBuild);
+const handleJS = javaScript.bind(null, !isBuild);
+const handleImages = images.bind(null, isBuild);
 
-gulp.task("copy", function () {
-  return gulp.src([
-    "src/fonts/**/*.{woff,woff2}",
-    "src/img/**",
-    "src/*.ico"
-  ], {
-    base: "src"
-  })
-  .pipe(gulp.dest("dist"));
-});
+/**
+ * Наблюдатель за изменениями в файлах
+ */
+function watcher() {
+  gulp.watch(filePaths.watch.static, copy);
+  gulp.watch(filePaths.watch.html, handleHTML);
+  gulp.watch(filePaths.watch.scss, handleSCSS);
+  gulp.watch(filePaths.watch.js, handleJS);
+  gulp.watch(filePaths.watch.images,handleImages);
+}
 
-gulp.task("css", function () {
-  return gulp.src("src/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest("dist/css"))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("dist/css"))
-    .pipe(server.stream());
-});
+/**
+ * Последовательная обработка шрифтов
+ * */
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 
-gulp.task("script-min", function() {
-  return gulp.src("src/js/**/*.js")
-  .pipe(gulp.dest("dist/js"))
-  .pipe(uglify())
-  .pipe(rename({suffix: ".min"}))
-  .pipe(gulp.dest("dist/js"));
-});
+/**
+ * Параллельные задачи в режиме разработки
+ * */
+const devTasks = gulp.parallel(copy, copyRootFiles, createSvgSprite, handleHTML, handleSCSS, handleJS, handleImages);
 
-gulp.task("sprite", function () {
-  return gulp.src("src/img/icon-*.svg")
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("dist/img"));
-});
+/**
+ * Основные задачи
+ * */
+const mainTasks = gulp.series(fonts, devTasks);
 
-gulp.task("html", function () {
-  return gulp.src("src/*.html")
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(htmlmin({
-    minifyJS: true,
-    minifyURLs: true,
-    collapseWhitespace: true,
-    removeComments: true,
-    sortAttributes: true,
-    sortClassName: true
-  }))
-  .pipe(sourcemap.write())
-  .pipe(gulp.dest("dist"))
-});
+/**
+ * Построение сценариев выполнения задач
+ * */
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
+const deployZIP = gulp.series(reset, mainTasks, zip);
+const deployFTP = gulp.series(reset, mainTasks, ftpDeploy);
 
-gulp.task("images", function () {
-  return gulp.src("src/img/**/*.{png,jpg,svg}")
-  .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.mozjpeg({progressive: true}),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("dist/img"));
-});
+/**
+ * Выполнение сценария по умолчанию
+ * */
+gulp.task('default', dev);
 
-gulp.task("webp", function () {
-  return gulp.src("src/img/**/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("dist/img"));
-});
-
-gulp.task("server", function () {
-  server.init({
-    server: "dist/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch("src/sass/**/*.{sass,scss}", gulp.series("css"));
-  gulp.watch("src/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
-  gulp.watch("src/*.html", gulp.series("html", "refresh"));
-});
-
-gulp.task("refresh", function(done) {
-  server.reload();
-  done();
-});
-
-gulp.task("build", gulp.series(
-  "clean",
-  "copy",
-  "images",
-  "webp",
-  "css",
-  "script-min",
-  "sprite",
-  "html"
-  ));
-gulp.task("start", gulp.series("build", "server"));
+/**
+ * Экспорт сценариев
+ * */
+export { dev, build, deployZIP, deployFTP, createSvgSprite };
