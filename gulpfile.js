@@ -1,9 +1,6 @@
 import gulp from 'gulp';
 import { filePaths } from './gulp/config/paths.js';
 
-/**
- * Импорт задач
- */
 import { copy } from './gulp/tasks/copy.js';
 import { copyRootFiles } from './gulp/tasks/copyRootFiles.js';
 import { reset } from './gulp/tasks/reset.js';
@@ -23,9 +20,6 @@ const handleSCSS = scss.bind(null, isBuild);
 const handleJS = javaScript.bind(null, !isBuild);
 const handleImages = images.bind(null, isBuild);
 
-/**
- * Наблюдатель за изменениями в файлах
- */
 function watcher() {
   gulp.watch(filePaths.watch.static, copy);
   gulp.watch(filePaths.watch.html, handleHTML);
@@ -34,35 +28,17 @@ function watcher() {
   gulp.watch(filePaths.watch.images,handleImages);
 }
 
-/**
- * Последовательная обработка шрифтов
- * */
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 
-/**
- * Параллельные задачи в режиме разработки
- * */
 const devTasks = gulp.parallel(copy, copyRootFiles, createSvgSprite, handleHTML, handleSCSS, handleJS, handleImages);
 
-/**
- * Основные задачи
- * */
 const mainTasks = gulp.series(fonts, devTasks);
 
-/**
- * Построение сценариев выполнения задач
- * */
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftpDeploy);
 
-/**
- * Выполнение сценария по умолчанию
- * */
 gulp.task('default', dev);
 
-/**
- * Экспорт сценариев
- * */
 export { dev, build, deployZIP, deployFTP, createSvgSprite };
