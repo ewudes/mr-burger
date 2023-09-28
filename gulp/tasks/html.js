@@ -6,10 +6,11 @@ import htmlMin from 'gulp-htmlmin';
 
 import { plugins } from '../config/plugins.js';
 import { filePaths } from '../config/paths.js';
-import { logger } from "../config/Logger.js";
+import { logger } from '../config/Logger.js';
 
 const html = (isBuild) => {
-  return gulp.src(filePaths.src.html)
+  return gulp
+    .src(filePaths.src.html)
     .pipe(logger.handleError('HTML'))
     .pipe(fileInclude())
     .pipe(plugins.replace(/@img\//g, 'images/'))

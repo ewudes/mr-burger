@@ -3,13 +3,15 @@ import del from 'del';
 import zipPlugin from 'gulp-zip';
 
 import { filePaths } from '../config/paths.js';
-import { logger } from "../config/Logger.js";
+import { logger } from '../config/Logger.js';
 
 const zip = () => {
-  del(`./${filePaths.projectDirName}.zip`)
-    .then(() => logger.warning('Прошлый ZIP архив успешно удалён'));
+  del(`./${filePaths.projectDirName}.zip`).then(() =>
+    logger.warning('Прошлый ZIP архив успешно удалён')
+  );
 
-  return gulp.src(`${filePaths.buildFolder}/**/*.*`, {})
+  return gulp
+    .src(`${filePaths.buildFolder}/**/*.*`, {})
     .pipe(logger.handleError('ZIP'))
     .pipe(zipPlugin(`${filePaths.projectDirName}.zip`))
     .pipe(gulp.dest('./'));

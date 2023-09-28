@@ -12,5 +12,5 @@ export const plugins = {
   replace,
   browserSync,
   newer,
-  concat: concatPathAndFileName
+  concat: concatPathAndFileName,
 };

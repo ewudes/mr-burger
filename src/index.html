@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
-  @@include('components/head.html')
-  <body>
-    <div class="wrapper">
-      <div class="maincontent">
-        @@include('components/greeting.html') @@include('components/best.html')
-        @@include('components/slider.html') @@include('components/team.html')
-        @@include('components/menu.html') @@include('components/reviews.html')
-        @@include('components/order.html') @@include('components/contacts.html')
-      </div>
+@@include('components/head.html')
 
-      <ul class="nav-section" id="myMenu">
-        <li
-          data-menuanchor="greeting"
-          class="nav-section__item nav-section__item--active"
-        >
-          <a href="#greeting" class></a>
-        </li>
-        <li data-menuanchor="best" class="nav-section__item">
-          <a href="#best" class></a>
-        </li>
-        <li data-menuanchor="slider" class="nav-section__item">
-          <a href="#slider" class></a>
-        </li>
-        <li data-menuanchor="team" class="nav-section__item">
-          <a href="#team" class></a>
-        </li>
-        <li class="nav-section__item">
-          <a href="#menu" class></a>
-        </li>
-        <li class="nav-section__item">
-          <a href="#reviews" class></a>
-        </li>
-        <li class="nav-section__item">
-          <a href="#order" class></a>
-        </li>
-        <li class="nav-section__item">
-          <a href="#contacts" class></a>
-        </li>
-      </ul>
+<body>
+  <div class="wrapper">
+    <div class="maincontent">
+      @@include('components/greeting.html')
+      @@include('components/best.html')
+      @@include('components/slider.html')
+      @@include('components/team.html')
+      @@include('components/menu.html')
+      @@include('components/reviews.html')
+      @@include('components/order.html')
+      @@include('components/contacts.html')
     </div>
-    <script src="js/app.min.js"></script>
-  </body>
+
+    <ul class="nav-section" id="myMenu">
+      <li data-menuanchor="greeting" class="nav-section__item nav-section__item--active">
+        <a href="#greeting" class></a>
+      </li>
+      <li data-menuanchor="best" class="nav-section__item">
+        <a href="#best" class></a>
+      </li>
+      <li data-menuanchor="slider" class="nav-section__item">
+        <a href="#slider" class></a>
+      </li>
+      <li data-menuanchor="team" class="nav-section__item">
+        <a href="#team" class></a>
+      </li>
+      <li class="nav-section__item">
+        <a href="#menu" class></a>
+      </li>
+      <li class="nav-section__item">
+        <a href="#reviews" class></a>
+      </li>
+      <li class="nav-section__item">
+        <a href="#order" class></a>
+      </li>
+      <li class="nav-section__item">
+        <a href="#contacts" class></a>
+      </li>
+    </ul>
+  </div>
+  <script src="js/app.min.js"></script>
+</body>
+
 </html>
