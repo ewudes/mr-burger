@@ -1,19 +1,19 @@
-import gulp from 'gulp';
-import fileInclude from 'gulp-file-include';
-import webpHtml from 'gulp-webp-html-nosvg';
-import versionNumber from 'gulp-version-number';
-import htmlMin from 'gulp-htmlmin';
+import gulp from "gulp";
+import fileInclude from "gulp-file-include";
+import webpHtml from "gulp-webp-html-nosvg";
+import versionNumber from "gulp-version-number";
+import htmlMin from "gulp-htmlmin";
 
-import { plugins } from '../config/plugins.js';
-import { filePaths } from '../config/paths.js';
-import { logger } from '../config/Logger.js';
+import { plugins } from "../config/plugins.js";
+import { filePaths } from "../config/paths.js";
+import { logger } from "../config/Logger.js";
 
 const html = (isBuild) => {
   return gulp
     .src(filePaths.src.html)
-    .pipe(logger.handleError('HTML'))
+    .pipe(logger.handleError("HTML"))
     .pipe(fileInclude())
-    .pipe(plugins.replace(/@img\//g, 'images/'))
+    .pipe(plugins.replace(/@img\//g, "images/"))
     .pipe(plugins.if(isBuild, webpHtml()))
     .pipe(
       htmlMin({
@@ -26,16 +26,16 @@ const html = (isBuild) => {
       plugins.if(
         isBuild,
         versionNumber({
-          value: '%DT%',
+          value: "%DT%",
 
           append: {
-            key: '_v',
+            key: "_v",
             cover: 0,
-            to: ['css', 'js'],
+            to: ["css", "js"],
           },
 
           output: {
-            file: 'gulp/version.json',
+            file: "gulp/version.json",
           },
         })
       )

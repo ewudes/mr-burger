@@ -1,7 +1,7 @@
-import path from 'path';
+import path from "path";
 
-const buildFolder = './dist';
-const srcFolder = './src';
+const buildFolder = "./dist";
+const srcFolder = "./src";
 
 const filePaths = {
   build: {

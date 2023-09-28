@@ -1,217 +1,235 @@
-.slider{
-    position: relative;
-    background: repeating-linear-gradient(180deg, #f9b43b, #eb8c38 50%, #eb8c38, #f9b43b);
-    background-size: cover;
+.slider {
+  position: relative;
+  background: repeating-linear-gradient(180deg, #f9b43b, #eb8c38 50%, #eb8c38, #f9b43b);
+  background-size: cover;
 }
 
-.page-control{
-    display: flex;
-    cursor: pointer;
+.page-control {
+  display: flex;
+  cursor: pointer;
 }
 
-.slider-wrap{
-    display: flex;
-    margin: auto;
-    overflow: hidden;
-    
+.slider-wrap {
+  display: flex;
+  margin: auto;
+  overflow: hidden;
+
 
 }
 
-.slider-list{
-    display: flex;
-    transition: all .5s;
+.slider-list {
+  display: flex;
+  transition: all .5s;
 }
 
-.slider-item{
-    display: flex;
-    @include tablets{
-        flex-direction: column;
-    }
-}
+.slider-item {
+  display: flex;
 
-.slider-left, .slider-right{
-    width: 50%;
-    display: flex;
-    @include tablets{
-        margin: auto;
-        width: 80%;
-    }
-    @include phones{
-        width: 100%;
-    }
-}
-
-.slider-left{
-    position: relative;
-    @include phones{
-        height: 250px;
-    }
-}
-
-.slider-right{
+  @include tablets {
     flex-direction: column;
-    padding: 0 2%;
-    @include tablets{
-        text-align: center;
-    }
+  }
 }
 
-.slider-left_img, .slider-right_img{
-    width: 20px;
-    fill: #fff;
+.slider-left,
+.slider-right {
+  width: 50%;
+  display: flex;
+
+  @include tablets {
     margin: auto;
-}
-
-.slider-left_img{
-    transform: rotate(90deg);
-    &:hover{
-        fill: #263238
-    }
-}
-
-.slider-right_img{
-    transform: rotate(-90deg);
-    &:hover{
-        fill: #263238
-    }
-}
-
-.slider-img{
-    max-height: 250px;
     width: 80%;
-    margin: auto;
-    @include tablets{
-        width: 70%;
-        margin-bottom: 0;
-    }
+  }
+
+  @include phones {
+    width: 100%;
+  }
 }
 
-.slider-right__descr{
-    color: #fff;
-    font-size: 14px;
-    line-height: 25px;
-    margin-bottom: 25px;
-    @include tablets{
-        margin-bottom: 0;    }
+.slider-left {
+  position: relative;
+
+  @include phones {
+    height: 250px;
+  }
 }
 
+.slider-right {
+  flex-direction: column;
+  padding: 0 2%;
 
-.composition-descr{
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 90px;
-    background: #fff;
-    border-radius: 6px;
-    opacity: .9;
-    width: 270px;
-    height: 330px;
-    @include tablets{
-        top: 10%;
-    }
-}
-
-.composition-descr_active{
-   display: block;
-}
-
-.composition-wrap{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    width: 90px;
-    height: 90px;
-    background: #f08c33;
-    border-radius: 6px;
-    cursor: pointer;
-    &_active{
-        background: $red;
-    }
-    &:hover{
-         background: $red;
-    }
-    @include tablets{
-        top: 10%;
-    }
-}
-
-.composition__item-img{
-    width: 45px;
-    height: 45px;
-    margin-right: 20px;
-}
-
-.composition__list{
-    padding: 10px 30px;
-}
-
-.composition__item{
-    display: flex;
-    align-items: center;
-    margin: 5px 0 5px;
-}
-
-
-.composition__item-name, .composition__item-gr{
-    @include ubuntu($style: medium);
-    font-size: 14px;
-    color: #2f3234;
-}
-
-.composition__item-gr{
-    margin-left: auto;
-}
-
-.composition{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
-.composition-img{
-    width: 50px;
-    height: 50px;
-    fill: #fff;
-}
-
-.composition-text{
-    @include gagalin();
-    font-size: 14px;
-    color: #fff;
+  @include tablets {
     text-align: center;
+  }
 }
 
-.calories-wrap{
-    position: absolute;
-    width: 60px;
-    height: 80px;
-    bottom: 0;
-    color: #fff;
-    opacity: .5;
-    @include tablets{
-        top: 10%;
-        right: 0;
-    }
+.slider-left_img,
+.slider-right_img {
+  width: 20px;
+  fill: #fff;
+  margin: auto;
 }
 
-.calories-img{
-    height: 60px;
-    width: 60px;
-    fill: #fff;
+.slider-left_img {
+  transform: rotate(90deg);
+
+  &:hover {
+    fill: #263238
+  }
 }
 
-.calories{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+.slider-right_img {
+  transform: rotate(-90deg);
+
+  &:hover {
+    fill: #263238
+  }
 }
 
-.kkal{
-    @include gagalin();
-    font-size: 20px;
+.slider-img {
+  max-height: 250px;
+  width: 80%;
+  margin: auto;
+
+  @include tablets {
+    width: 70%;
+    margin-bottom: 0;
+  }
 }
 
-.calories-text{
-    @include gagalin();
-    text-align: center;
+.slider-right__descr {
+  color: #fff;
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 25px;
+
+  @include tablets {
+    margin-bottom: 0;
+  }
+}
+
+
+.composition-descr {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 90px;
+  background: #fff;
+  border-radius: 6px;
+  opacity: .9;
+  width: 270px;
+  height: 330px;
+
+  @include tablets {
+    top: 10%;
+  }
+}
+
+.composition-descr_active {
+  display: block;
+}
+
+.composition-wrap {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  background: #f08c33;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &_active {
+    background: $red;
+  }
+
+  &:hover {
+    background: $red;
+  }
+
+  @include tablets {
+    top: 10%;
+  }
+}
+
+.composition__item-img {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+}
+
+.composition__list {
+  padding: 10px 30px;
+}
+
+.composition__item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0 5px;
+}
+
+
+.composition__item-name,
+.composition__item-gr {
+  @include ubuntu($style: medium);
+  font-size: 14px;
+  color: #2f3234;
+}
+
+.composition__item-gr {
+  margin-left: auto;
+}
+
+.composition {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.composition-img {
+  width: 50px;
+  height: 50px;
+  fill: #fff;
+}
+
+.composition-text {
+  @include gagalin();
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.calories-wrap {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  bottom: 0;
+  color: #fff;
+  opacity: .5;
+
+  @include tablets {
+    top: 10%;
+    right: 0;
+  }
+}
+
+.calories-img {
+  height: 60px;
+  width: 60px;
+  fill: #fff;
+}
+
+.calories {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.kkal {
+  @include gagalin();
+  font-size: 20px;
+}
+
+.calories-text {
+  @include gagalin();
+  text-align: center;
 }

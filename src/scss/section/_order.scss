@@ -1,112 +1,119 @@
-.order{
-    background: url('../images/bg/order-bg.jpg') center center no-repeat;
-    background-size: cover;
+.order {
+  background: url('../images/bg/order-bg.jpg') center center no-repeat;
+  background-size: cover;
 }
 
-.form__elem{
-    display: flex;
-    color: #fff;
-    @include tablets{
-        flex-direction: column;
-        width: 75%;
-        margin: auto;
-    }
-    @include phones{
-        width: 90%;
-    }
+.form__elem {
+  display: flex;
+  color: #fff;
+
+  @include tablets {
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+  }
+
+  @include phones {
+    width: 90%;
+  }
 }
 
-.form__content{
-    margin: 0 rem(10px);
-    width: 50%;
-    @include tablets{
-        width: 100%;
-    }
-}
+.form__content {
+  margin: 0 rem(10px);
+  width: 50%;
 
-.form__row{
-    margin-bottom: rem(10px);
-    display: flex;
-}
-
-.form__block{
-    display: block;
-    flex: 1;
-    margin-right: rem(20px);
-    margin-top: rem(5px);
-    &:last-child{
-        margin-right: 0;
-    }
-}
-
-.form__block-title{
-    display: inline-block;
-    font-size: rem(14px);
-}
-
-.form__input{
-    padding: rem(8px);
-    margin-top: rem(5px);
-    background: #fff;
-    border: none;
-    border-radius: rem(5px);
-    border: rem(2px) solid transparent;
+  @include tablets {
     width: 100%;
-    resize: none;
-    outline: none;
-    box-sizing: border-box;
-    &:focus{
-        border: rem(2px) solid $yellow;
-    }
+  }
 }
 
-.form__text{
-    margin-bottom: rem(5px);
-    height: rem(110px);
+.form__row {
+  margin-bottom: rem(10px);
+  display: flex;
 }
 
-input[name="dont-disturb"]{
-    display: none;
-}
-input[name="pay-option"]{
-    display: none;
+.form__block {
+  display: block;
+  flex: 1;
+  margin-right: rem(20px);
+  margin-top: rem(5px);
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-input[type="checkbox"]+span,input[type="radio"]+span{
-    -webkit-appearance: none;
-    width: rem(14px);
-    height: rem(14px);
-    border: rem(1px) solid rgba(#fff,.3);
-    background: #fff;
-    outline: none;
-    margin-right: rem(6px);
-    box-sizing: border-box;
-    display: inline-block;
+.form__block-title {
+  display: inline-block;
+  font-size: rem(14px);
 }
 
-input[type="checkbox"]:checked+span:before{
-    content: "";
-    display: block;
-    width: rem(6px);
-    height: rem(10px);
-    border: 0 solid $red;
-    border-width: 0 rem(2px) rem(2px) 0;
-    -webkit-transform: rotateZ(45deg);
-    margin: rem(-1px) rem(3px);
-    pointer-events: none;
+.form__input {
+  padding: rem(8px);
+  margin-top: rem(5px);
+  background: #fff;
+  border: none;
+  border-radius: rem(5px);
+  border: rem(2px) solid transparent;
+  width: 100%;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+
+  &:focus {
+    border: rem(2px) solid $yellow;
+  }
 }
 
-input[type="radio"]+span{
-    border-radius: 100%;
+.form__text {
+  margin-bottom: rem(5px);
+  height: rem(110px);
 }
 
-input[type="radio"]:checked+span:before{
-    content: "";
-    display: block;
-    background: $red;
-    border-radius: 100%;
-    width: rem(6px);
-    height: rem(6px);
-    margin: rem(3px);
-    pointer-events: none;
+input[name="dont-disturb"] {
+  display: none;
+}
+
+input[name="pay-option"] {
+  display: none;
+}
+
+input[type="checkbox"]+span,
+input[type="radio"]+span {
+  -webkit-appearance: none;
+  width: rem(14px);
+  height: rem(14px);
+  border: rem(1px) solid rgba(#fff, .3);
+  background: #fff;
+  outline: none;
+  margin-right: rem(6px);
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+input[type="checkbox"]:checked+span:before {
+  content: "";
+  display: block;
+  width: rem(6px);
+  height: rem(10px);
+  border: 0 solid $red;
+  border-width: 0 rem(2px) rem(2px) 0;
+  -webkit-transform: rotateZ(45deg);
+  margin: rem(-1px) rem(3px);
+  pointer-events: none;
+}
+
+input[type="radio"]+span {
+  border-radius: 100%;
+}
+
+input[type="radio"]:checked+span:before {
+  content: "";
+  display: block;
+  background: $red;
+  border-radius: 100%;
+  width: rem(6px);
+  height: rem(6px);
+  margin: rem(3px);
+  pointer-events: none;
 }

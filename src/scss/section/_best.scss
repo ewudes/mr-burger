@@ -1,66 +1,73 @@
-.best{
-    background: url('../images/bg/best-bg.jpg') center center no-repeat;
-    background-size: cover;
+.best {
+  background: url('../images/bg/best-bg.jpg') center center no-repeat;
+  background-size: cover;
 }
 
-.best__list{
-    display: flex;
-    justify-content: space-between;
-    @include phones{
-        display: flex;
-        flex-direction: column;
-        padding: 0 10px;
-    }
-}
+.best__list {
+  display: flex;
+  justify-content: space-between;
 
-.best__item{
+  @include phones {
     display: flex;
-    width: 30%;
     flex-direction: column;
-    @include phones{
-        flex-direction: row;
-        width: 100%;
-        margin: 15px 0;
-    }
+    padding: 0 10px;
+  }
 }
 
-.best__icon{
-    display: flex;
-    justify-content: center;
-    @include phones{
-        margin-right: 15px;
-    }
+.best__item {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+
+  @include phones {
+    flex-direction: row;
+    width: 100%;
+    margin: 15px 0;
+  }
 }
 
-.best__info{
-    text-align: center;
-    @include phones{
-        text-align: left;
-    }
+.best__icon {
+  display: flex;
+  justify-content: center;
+
+  @include phones {
+    margin-right: 15px;
+  }
 }
 
-.best__icon-pic{
-    width: rem(100px);
-    height: rem(90px);
-    &_meat{
-        fill: $red;
-    }
-    &_hand{
-        fill: $yellow;
-    }
-    &_natural{
-        fill: $green;
-    }
+.best__info {
+  text-align: center;
+
+  @include phones {
+    text-align: left;
+  }
 }
 
-.best__title{
-    @include lifehack;
-    font-size: rem(24px);
-    margin-bottom: rem(20px);
+.best__icon-pic {
+  width: rem(100px);
+  height: rem(90px);
+
+  &_meat {
+    fill: $red;
+  }
+
+  &_hand {
+    fill: $yellow;
+  }
+
+  &_natural {
+    fill: $green;
+  }
 }
 
-.best__text{
-    @include ubuntu($style: light);
-    font-size: rem(14px);
-    opacity: .8;
+.best__title {
+  @include lifehack;
+  font-size: rem(24px);
+  margin-bottom: rem(20px);
+}
+
+.best__text {
+  @include ubuntu($style: light);
+  font-size: rem(14px);
+  opacity: .8;
 }

@@ -1,4 +1,4 @@
-.team{
+.team {
   background: url('../images/bg/team-bg.jpg') no-repeat;
   background-size: cover;
   position: relative;
@@ -13,7 +13,8 @@
   width: 45%;
   height: 100%;
   background-color: rgba(47, 50, 52, 0.93);
-  @include tablets{
+
+  @include tablets {
     width: 100%;
     display: flex;
     align-items: center;
@@ -22,8 +23,8 @@
   }
 }
 
-.team__content{
-  @include tablets{
+.team__content {
+  @include tablets {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +32,7 @@
   }
 }
 
-.team__content-wrap{
+.team__content-wrap {
   width: 71%;
   height: 93%;
   display: flex;
@@ -44,21 +45,23 @@
   margin-top: 0;
 }
 
-.team-list{
+.team-list {
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: 0;
   margin: 0;
-  @include tablets{
+
+  @include tablets {
     max-width: 65%;
   }
-  @include phones{
+
+  @include phones {
     max-width: 80%;
   }
 }
 
-.team-list__item{
+.team-list__item {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.375rem;
@@ -75,14 +78,15 @@
 .team-list__item--active .team-list__content {
   margin-bottom: 0.3125rem;
   height: rem(110px);
-  @include tablets{
+
+  @include tablets {
     flex-direction: column;
     text-align: center;
     height: rem(200px);
   }
 }
 
-.team-list__title{
+.team-list__title {
   display: flex;
   align-items: center;
   line-height: 2;
@@ -90,16 +94,18 @@
   color: #ffffff;
   text-transform: uppercase;
   cursor: pointer;
+
   &::before {
-      content: '';
-      width: 0;
-      height: 0;
-      margin-right: 0.625rem;
-      border: 0.3125rem solid transparent;
-      border-top-color: #f9b43b;
-      border-bottom: none;
+    content: '';
+    width: 0;
+    height: 0;
+    margin-right: 0.625rem;
+    border: 0.3125rem solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom: none;
   }
-  @include tablets{
+
+  @include tablets {
     font-size: 24px;
     margin: auto;
   }
@@ -111,15 +117,17 @@
   margin-top: 0.9375rem;
   overflow: hidden;
   transition: height 0.3s ease;
-  @include tablets{
+
+  @include tablets {
     align-items: center;
   }
 }
 
-.team-list__descr-title{
+.team-list__descr-title {
   @include ubuntu($style: bold);
   margin-bottom: rem(15px);
-  @include tablets{
+
+  @include tablets {
     margin-bottom: 10px;
   }
 }
@@ -146,7 +154,7 @@
   overflow: hidden;
 }
 
-.team-list__pic{
+.team-list__pic {
   position: absolute;
   top: 50%;
   left: 50%;

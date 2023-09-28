@@ -1,7 +1,7 @@
 const configFTP = {
-  host: '',
-  user: '',
-  password: '',
+  host: "",
+  user: "",
+  password: "",
   parallel: 20,
 };
 
