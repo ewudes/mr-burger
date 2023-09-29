@@ -32,7 +32,6 @@ const filePaths = {
   buildFolder,
   srcFolder,
   projectDirName: path.basename(path.resolve()),
-  ftp: ``,
 };
 
 export { filePaths };
