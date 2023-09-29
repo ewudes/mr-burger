@@ -1,5 +1,3 @@
-import "./jquery.fullPage.js";
-
 import "./sections/_greeting.js";
 import "./sections/_slider.js";
 import "./sections/_team.js";
