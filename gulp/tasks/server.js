@@ -10,6 +10,7 @@ const server = () => {
     cors: true,
     notify: true,
     port: 3000,
+    open: false,
   });
 };
 
