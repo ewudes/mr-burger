@@ -5,18 +5,14 @@
   background-color: $color;
 }
 
-//resolutions
-$tablets: 768px;
-$phones: 480px;
-
 @mixin tablets {
-  @media screen and (max-width: $tablets) {
+  @media screen and (max-width: $tablet-width) {
     @content;
   }
 }
 
 @mixin phones {
-  @media screen and (max-width: $phones) {
+  @media screen and (max-width: $phone-width) {
     @content;
   }
 }

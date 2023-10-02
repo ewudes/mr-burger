@@ -1,11 +1,67 @@
 .greeting {
-  background: url("../images/bg/video-bg.jpg") center center no-repeat;
+  background: url("../images/bg/greeting-bg.jpg") center center no-repeat;
   background-size: cover;
+
+  &__container {
+    justify-content: flex-start;
+  }
+
+  &__content {
+    flex: .8;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-bottom: auto;
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+
+  &__pic,
+  &__desc {
+    width: 60%;
+
+    @include tablets {
+      width: 86%;
+      text-align: center;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(115px);
+    margin: auto;
+
+    @include tablets {
+      padding-top: 0;
+    }
+
+    @include phones {
+      font-size: rem(54px);
+    }
+  }
+
+  &__desc-text {
+    @include lifehack;
+    font-size: rem(65px);
+    color: #fff;
+    line-height: rem(65px);
+
+    @include tablets {
+      font-size: rem(63px);
+    }
+
+    @include phones {
+      font-size: rem(54px);
+    }
+  }
 }
 
-.greeting__container {
-  justify-content: flex-start;
-}
+
+
+
 
 .header {
   display: flex;
@@ -64,63 +120,11 @@
   }
 }
 
-.greeting__content {
-  flex: .8;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  margin-bottom: auto;
-
-  @include tablets {
-    flex-direction: column;
-  }
-}
-
-.greeting__pic,
-.greeting__desc {
-  width: 60%;
-
-  @include tablets {
-    width: 86%;
-    text-align: center;
-  }
-}
-
-.greeting__desc {
-  display: flex;
-  flex-direction: column;
-  padding-top: rem(115px);
-  margin: auto;
-
-  @include tablets {
-    padding-top: 0;
-  }
-
-  @include phones {
-    font-size: rem(54px);
-  }
-}
-
 .greeting-pic__img {
   max-width: 95%;
 
   @include tablets {
     max-width: 60%;
-  }
-}
-
-.greeting__desc-text {
-  @include lifehack;
-  font-size: rem(65px);
-  color: #fff;
-  line-height: rem(65px);
-
-  @include tablets {
-    font-size: rem(63px);
-  }
-
-  @include phones {
-    font-size: rem(54px);
   }
 }
 

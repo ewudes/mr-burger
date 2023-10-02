@@ -1,14 +1,14 @@
 .wrapper {
   position: relative;
   width: 100%;
-  // min-width: rem(940px) + rem(20px);
+  min-width: rem($desktop-width) + rem(20px);
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
   width: 95%;
-  max-width: rem(940px);
+  max-width: rem($desktop-width);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
