@@ -1,3 +1,5 @@
+import "./base/_fullPageScroll";
+
 import "./sections/_greeting.js";
 import "./sections/_slider.js";
 import "./sections/_team.js";
