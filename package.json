@@ -1,5 +1,5 @@
 {
-  "name": "burgers-landing",
+  "name": "brgrs",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "type": "module",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ewudes/burgers-landing.git"
+    "url": "git+https://github.com/ewudes/brgrs.git"
   },
   "bugs": {
-    "url": "https://github.com/ewudes/burgers-landing/issues"
+    "url": "https://github.com/ewudes/brgrs/issues"
   },
-  "homepage": "https://github.com/ewudes/burgers-landing#readme",
+  "homepage": "https://github.com/ewudes/brgrs#readme",
   "dependencies": {
     "aos": "^2.3.4",
     "swiper": "^8.4.5"
