@@ -1,21 +1,20 @@
 @use "sass:math";
 
 //fonts
-
 @import "config/_fonts.scss";
 
 //config
-
 @import "config/_variables.scss";
 @import "config/_mixins.scss";
 
 //base
-
 @import "layout/_base.scss";
 @import "layout/_adjustment.scss";
 
-//sections
+//blocks
+@import "blocks/_header.scss";
 
+//sections
 @import "sections/_greeting.scss";
 @import "sections/_best.scss";
 @import "sections/_slider.scss";
