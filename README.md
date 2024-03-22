@@ -1,4 +1,4 @@
-# Burger-landing [![image](https://img.shields.io/badge/click_to_demo-blue)](https://brgrs.netlify.app/)
+# Mr-burger [![image](https://img.shields.io/badge/click_to_demo-blue)](https://mr-burger.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1c2bfc8f-b78b-4b37-8cfd-5807c1eaeadc/deploy-status)](https://app.netlify.com/sites/brgrs/deploys)
 
 Description coming soon
