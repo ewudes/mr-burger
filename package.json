@@ -1,5 +1,5 @@
 {
-  "name": "brgrs",
+  "name": "mr-burger",
   "version": "1.0.0",
   "main": "gulpfile.js",
   "type": "module",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ewudes/brgrs.git"
+    "url": "git+https://github.com/ewudes/mr-burger.git"
   },
   "bugs": {
-    "url": "https://github.com/ewudes/brgrs/issues"
+    "url": "https://github.com/ewudes/mr-burger/issues"
   },
-  "homepage": "https://github.com/ewudes/brgrs#readme",
+  "homepage": "https://github.com/ewudes/mr-burger#readme",
   "dependencies": {
     "aos": "^2.3.4",
     "swiper": "^8.4.5"
