@@ -1,15 +1,13 @@
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: rem($desktop-width) + rem(20px);
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 95%;
-  max-width: rem($desktop-width);
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -120,7 +118,7 @@
 
 
 .btn {
-  padding: rem(8px) rem(20px);
+  padding: 12px 20px;
   background: $red;
   text-transform: uppercase;
   font-size: rem(13px);
