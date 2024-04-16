@@ -78,30 +78,30 @@ input[name="pay-option"] {
   display: none;
 }
 
-input[type="checkbox"]+span,
-input[type="radio"]+span {
-  -webkit-appearance: none;
-  width: rem(14px);
-  height: rem(14px);
-  border: rem(1px) solid rgba(#fff, .3);
-  background: #fff;
-  outline: none;
-  margin-right: rem(6px);
-  box-sizing: border-box;
-  display: inline-block;
-}
+// input[type="checkbox"]+span,
+// input[type="radio"]+span {
+//   -webkit-appearance: none;
+//   width: rem(14px);
+//   height: rem(14px);
+//   border: rem(1px) solid rgba(#fff, .3);
+//   background: #fff;
+//   outline: none;
+//   margin-right: rem(6px);
+//   box-sizing: border-box;
+//   display: inline-block;
+// }
 
-input[type="checkbox"]:checked+span:before {
-  content: "";
-  display: block;
-  width: rem(6px);
-  height: rem(10px);
-  border: 0 solid $red;
-  border-width: 0 rem(2px) rem(2px) 0;
-  -webkit-transform: rotateZ(45deg);
-  margin: rem(-1px) rem(3px);
-  pointer-events: none;
-}
+// input[type="checkbox"]:checked+span:before {
+//   content: "";
+//   display: block;
+//   width: rem(6px);
+//   height: rem(10px);
+//   border: 0 solid $red;
+//   border-width: 0 rem(2px) rem(2px) 0;
+//   -webkit-transform: rotateZ(45deg);
+//   margin: rem(-1px) rem(3px);
+//   pointer-events: none;
+// }
 
 input[type="radio"]+span {
   border-radius: 100%;
