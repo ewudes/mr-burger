@@ -7,7 +7,7 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -35,6 +35,7 @@
 .section {
   height: 100vh;
   min-height: rem(650px);
+  padding-top: 85px;
 }
 
 .section-title {

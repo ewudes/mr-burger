@@ -8,7 +8,7 @@
   background-color: $greeting-bg-color;
 
   &__container {
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__content {
@@ -31,6 +31,7 @@
     color: #ffffff;
     font-size: rem(52px);
     line-height: 1.2;
+    @include lifehack;
   }
 }
 
