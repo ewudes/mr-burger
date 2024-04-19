@@ -2,7 +2,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1c2bfc8f-b78b-4b37-8cfd-5807c1eaeadc/deploy-status)](https://app.netlify.com/sites/brgrs/deploys)
 ![image](https://img.shields.io/badge/16.20.2-43853D?style=for-the-badge&logo=node.js&logoColor=white&style=flat)
 
-Description coming soon
+⏳ Description coming soon
+
+⚠️ It is not a copy of the Loftschool school project
 
 ![image](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&style=flat)
 ![image](https://img.shields.io/badge/Gulp-%23CF4647.svg?style=for-the-badge&logo=gulp&logoColor=white&style=flat)
