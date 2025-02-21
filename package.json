@@ -59,7 +59,7 @@
     "prettier": "2.8.8",
     "sass": "*1.62.1",
     "webp-converter": "*2.2.3",
-    "webpack": "^5.65.0",
+    "webpack": "^5.98.0",
     "webpack-stream": "^7.0.0"
   }
 }
