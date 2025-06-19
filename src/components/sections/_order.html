@@ -2,7 +2,9 @@
   <div class="container">
     <h2 class="section-title section-title_align_center">закажите доставку</h2>
     <form action="server.php" method="post" id="order-form" class="form__elem">
-      <div class="form__content">
+
+      <fieldset class="form__content">
+        <legend class="visually-hidden">Контактные данные</legend>
         <div class="form__row">
           <label class="form__block">
             <span class="form__block-title">Имя</span>
@@ -10,15 +12,17 @@
           </label>
           <label class="form__block">
             <span class="form__block-title">Телефон</span>
-            <input type="text" class="form__input" name="user-phone" required />
+            <input type="tel" class="form__input" name="user-phone" required />
           </label>
         </div>
+
         <div class="form__row">
           <label class="form__block">
             <span class="form__block-title">Улица</span>
             <input type="text" class="form__input" name="user-street" required />
           </label>
         </div>
+
         <div class="form__row">
           <label class="form__block">
             <span class="form__block-title">Дом</span>
@@ -26,46 +30,49 @@
           </label>
           <label class="form__block">
             <span class="form__block-title">Корпус</span>
-            <input type="text" class="form__input" name="user-case" required />
+            <input type="text" class="form__input" name="user-case" />
           </label>
           <label class="form__block">
             <span class="form__block-title">Квартира</span>
-            <input type="text" class="form__input" name="user-apartment" required />
+            <input type="text" class="form__input" name="user-apartment" />
           </label>
           <label class="form__block">
             <span class="form__block-title">Этаж</span>
-            <input type="text" class="form__input" name="user-floor" required />
+            <input type="text" class="form__input" name="user-floor" />
           </label>
         </div>
-      </div>
-      <div class="form__content">
+      </fieldset>
+
+      <fieldset class="form__content">
+        <legend class="visually-hidden">Дополнительная информация</legend>
+
         <div class="form__row">
           <label class="form__block">
             <span class="form__block-title">Комментарий</span>
             <textarea class="form__input form__text" name="message"></textarea>
           </label>
         </div>
+
         <div class="form__row">
           <label class="form__block">
             <input type="radio" id="pay-cash" name="pay-option" value="потребуется сдача" />
-            <span></span>
             <span class="form__block-title">Потребуется сдача</span>
           </label>
           <label class="form__block">
             <input type="radio" id="pay-card" name="pay-option" value="оплата по карте" />
-            <span></span>
             <span class="form__block-title">Оплата по карте</span>
           </label>
         </div>
+
         <div class="form__row">
           <label class="form__block">
             <input type="checkbox" name="dont-disturb" value="1" />
-            <span></span>
             <span class="form__block-title">Не перезванивать</span>
           </label>
         </div>
+
         <button type="submit" class="btn">Заказать</button>
-      </div>
+      </fieldset>
     </form>
   </div>
 </section>
