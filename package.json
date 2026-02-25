@@ -20,7 +20,7 @@
   "homepage": "https://github.com/ewudes/mr-burger#readme",
   "dependencies": {
     "aos": "^2.3.4",
-    "swiper": "^8.4.5"
+    "swiper": "^12.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.22.10",
